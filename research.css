@@ -1,0 +1,122 @@
+body {
+background-color : black;
+color : white;
+}
+
+.sentence {
+font-size : 12px;
+line-height : 0.5;
+}
+
+
+
+.cp_iptxt {
+	position: relative;
+	width: 40%;
+	margin: 15px 50px 20px 0;
+}
+.cp_iptxt input[type='text'] {
+	font: 14px/16px sans-serif;
+	box-sizing: border-box;
+	width: 50%;
+	letter-spacing: 1px;
+	padding-left: 0;
+}
+.cp_iptxt input[type='text']:focus {
+	outline: none;
+}
+.ef {
+	padding: 7px 14px;
+	transition: 0.4s;
+	border: 1px solid white;
+	background: white;
+}
+.ef ~ .focus_line:before,
+.ef ~ .focus_line:after {
+	position: absolute;
+	top: -1px;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	content: '';
+	transition: 0.4s;
+	background-color: #adda3c;
+}
+.ef ~ .focus_line:after {
+	top: auto;
+	bottom: 0;
+}
+.ef ~ .focus_line i:before,
+.ef ~ .focus_line i:after {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 2px;
+	height: 0;
+	content: '';
+	transition: 0.6s;
+	background-color: #adda3c;
+}
+.ef ~ .focus_line i:after {
+	right: 0;
+	left: auto;
+}
+.ef:focus ~ .focus_line:before,
+.ef:focus ~ .focus_line:after,
+.cp_iptxt.ef ~ .focus_line:before,
+.cp_iptxt.ef ~ .focus_line:after {
+	left: 0;
+	width: 50%;
+	transition: 0.4s;
+}
+.ef:focus ~ .focus_line i:before,
+.ef:focus ~ .focus_line i:after,
+.cp_iptxt.ef ~ .focus_line i:before,
+.cp_iptxt.ef ~ .focus_line i:after {
+	top: -1px;
+	height: 0%;
+	transition: 0.6s;
+}
+.ef ~ label {
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: 14px;
+	width: 50%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: #aaaaaa;
+}
+.ef:focus ~ label,
+.cp_iptxt.ef ~ label {
+	font-size: 14px;
+	top: -18px;
+	left: 0;
+	transition: 0.3s;
+	color: #adda3c;
+}
+
+
+
+.decoButton {
+   background-color: #696969;   /* ボタンの表面色 */
+   color: white;             /* ボタンの文字色 */
+   font-size: 1em;           /* ボタンの文字サイズ */
+   border: solid 1px;
+   border-image: linear-gradient(to right bottom,
+   red, orange, yellow, green, blue, indigo, violet)
+   1 / 1 / 0;
+   cursor: pointer;          /* マウスポインタの形状 */
+}
+
+.decoButton:hover {
+  animation: hoverShake 0.15s linear 3;
+  opacity: 1;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
