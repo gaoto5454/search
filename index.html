@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>job_search</title>
+  <link rel="stylesheet" href="research.css">
+</head>
+<body>
+
+<h1 class="neon" data-text="[Neon_Friday]">職場検索フォーム</h1>
+
+  <form action="research_add.php" method="post" autocomplete="off">
+  
+  <div class="cp_iptxt">
+  <input name="name" class="ef" type="text" placeholder="オーナー名">
+  <label>オーナー名</label>
+  <span class="focus_line"><i></i></span>
+  </div>
+  <div class="cp_iptxt">
+  <input name="address" class="ef" type="text" placeholder="住所 例)東京都">
+  <label>住所</label>
+  <span class="focus_line"><i></i></span>
+  </div><br>
+
+    
+  <div class="sentence">
+    <p>更新日時を指定したい場合、下記を選択してください</p>
+    <p>※2020を選択すれば2020年以降に更新された検索結果が表示されます</p>
+    <p>以降：<input type="number" name="year" max="2021" min="1950" value="" placeholder="例)2020"></p><br>
+    
+    <p>もし指定した年より以前の結果を出力したい場合は下記を選択してください</p>
+    <p>※2020を選択すれば2015年以前に更新された検索結果が表示されます</p>
+     <p>以前：<input type="number" name="backyear" max="2021" min="1950" value="" placeholder="例)2015"></p>
+  </div>
+  <br><br>
+    
+  <input type="submit" name="button" value="送信" class="decoButton">
+    
+  </form>
+
+</body>
+</html>
