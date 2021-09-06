@@ -9,8 +9,12 @@
 </head>
 
 <body>
-
+    
 <?php
+    echo "$_POST['name']";
+?>
+
+<!-- <?php
 $number = $_POST['year'];
 if (!empty($number)) {
 $year = "after:" . "<" . $number . ">";
@@ -122,6 +126,6 @@ $backyear = '';
 <form>
 <input type="button" onclick="history.back()" value="戻る">
 </form>
-
+ -->
 </body>
 </html>
